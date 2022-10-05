@@ -1,0 +1,7 @@
+<div *ngIf="(currencyRate$ | async) as currencyRate else loader" class="currency">
+    {{'1' | currency:'EUR':'code'}} = {{currencyRate | currency:'RUB':'code'}}
+</div>
+
+<ng-template #loader>
+    loading...
+</ng-template>
