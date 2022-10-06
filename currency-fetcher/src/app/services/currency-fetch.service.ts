@@ -30,7 +30,7 @@ export class CurrencyFetchService {
                     )
             ),
             retry({
-                resetOnSuccess: false,
+                resetOnSuccess: true,
                 count: this._sources.length,
                 delay: 500
             })
